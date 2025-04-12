@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Tables</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="/css/font-face.css" rel="stylesheet" media="all">
+    <link href="/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+ <div class="page-wrapper">
+    <!-- HEADER MOBILE-->
+    <header class="header-mobile d-block d-lg-none">
+        <div class="header-mobile__bar">
+            <div class="container-fluid">
+                <div class="header-mobile-inner">
+                    <a class="logo" href="send-email">
+                        <img src="/images/icon/logo.png" alt="CoolAdmin" />
+                    </a>
+                    <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar-mobile">
+            <div class="container-fluid">
+                <ul class="navbar-mobile__list list-unstyled">
+                    <li class="has-sub">
+                        <a class="js-arrow" href="/dash">
+                            <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="/index">
+                            <i class="fas fa-table"></i>Tables</a>
+                    </li>
+
+                    <li>
+                        <a href="/calendar">
+                            <i class="fas fa-calendar-alt"></i>Calendar</a>
+                    </li>
+                    <li>
+                        <a href="/map">
+                            <i class="fas fa-map-marker-alt"></i>Maps</a>
+                    </li>
+                    <li>
+                        <a href="send-email">
+                            <i class="fas fa-map-marker-alt"></i>mail</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER MOBILE-->
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <a href="#">
+                <img src="/images/icon/logo.png" alt="Cool Admin" />
+            </a>
+        </div>
+        <div class="menu-sidebar__content js-scrollbar1">
+            <nav class="navbar-sidebar">
+                <ul class="list-unstyled navbar__list">
+                    <li class="has-sub">
+                        <a class="js-arrow" href="/dash">
+                            <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="/index" >
+                            <i class="fas fa-table"></i>Tables</a>
+                    </li>
+                    <li>
+                        <a href="/calendar">
+                            <i class="fas fa-calendar-alt"></i>Calendar</a>
+                    </li>
+                    <li>
+                        <a href="/map">
+                            <i class="fas fa-map-marker-alt"></i>Maps</a>
+                    </li>
+                    <li>
+                        <a href="send-email">
+                            <i class="fas fa-map-marker-alt"></i>mail</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <!-- END MENU SIDEBAR-->
+
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        <form id="searchForm" class="form-header" action="" method="GET">
+                            <input id="searchInput" class="au-input au-input--xl" type="text" name="search" placeholder="chercher client par CIN" />
+                            <button class="au-btn--submit" type="submit">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </form>
+
+                        <div class="header-button">
+                            <div class="noti-wrap">
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-comment-more"></i>
+                                    <span class="quantity">1</span>
+                                    <div class="mess-dropdown js-dropdown">
+                                        <div class="mess__title">
+                                            <p>You have 2 news message</p>
+                                        </div>
+                                        <div class="mess__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="/images/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                                            </div>
+                                            <div class="content">
+                                                <h6>Michelle Moreno</h6>
+                                                <p>Have sent a photo</p>
+                                                <span class="time">3 min ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="mess__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="/images/icon/avatar-04.jpg" alt="Diane Myers" />
+                                            </div>
+                                            <div class="content">
+                                                <h6>Diane Myers</h6>
+                                                <p>You are now connected on message</p>
+                                                <span class="time">Yesterday</span>
+                                            </div>
+                                        </div>
+                                        <div class="mess__footer">
+                                            <a href="#">View all messages</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-email"></i>
+                                    <span class="quantity">1</span>
+                                    <div class="email-dropdown js-dropdown">
+                                        <div class="email__title">
+                                            <p>You have 3 New Emails</p>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="/images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
+                                            </div>
+                                            <div class="content">
+                                                <p>Meeting about new dashboard...</p>
+                                                <span>Cynthia Harvey, 3 min ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="/images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
+                                            </div>
+                                            <div class="content">
+                                                <p>Meeting about new dashboard...</p>
+                                                <span>Cynthia Harvey, Yesterday</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="/images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
+                                            </div>
+                                            <div class="content">
+                                                <p>Meeting about new dashboard...</p>
+                                                <span>Cynthia Harvey, April 12,,2018</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__footer">
+                                            <a href="#">See all emails</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-notifications"></i>
+                                    <span class="quantity">3</span>
+                                    <div class="notifi-dropdown js-dropdown">
+                                        <div class="notifi__title">
+                                            <p>You have 3 Notifications</p>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c1 img-cir img-40">
+                                                <i class="zmdi zmdi-email-open"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a email notification</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c2 img-cir img-40">
+                                                <i class="zmdi zmdi-account-box"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>Your account has been blocked</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c3 img-cir img-40">
+                                                <i class="zmdi zmdi-file-text"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a new file</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__footer">
+                                            <a href="#">All notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-wrap">
+                                <div class="account-item clearfix js-item-menu">
+                                    <div class="image">
+                                        <img src="/images/icon/avatar-01.png" alt="Admin" />
+                                    </div>
+                                    <div class="content">
+                                        <a class="js-acc-btn" href="#">Admin</a>
+                                    </div>
+                                    <div class="account-dropdown js-dropdown">
+                                        <div class="info clearfix">
+                                            <div class="image">
+                                                <a href="#">
+                                                    <img src="/images/icon/avatar-01.png" alt="Admin" />
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="name">
+                                                    <a href="#">Admin</a>
+                                                </h5>
+                                                <span class="email">Admin</span>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__body">
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-account"></i>Account</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__footer">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-power"></i>Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- DATA TABLE -->
+                            <h3 class="title-5 m-b-35">Data Table</h3>
+                            <div class="table-data__tool">
+                                <div class="table-data__tool-left">
+
+                                    <div class="rs-select2--light rs-select2--md">
+                                        <select class="js-select2" name="property" onchange="handleSortChange(this)">
+                                            <option selected="selected" value="id">order by</option>
+
+                                            <option value="statue">Statue</option>
+                                            <option value="date">Date</option>
+                                        </select>
+                                        <div class="dropDownSelect2"></div>
+                                    </div>
+                                </div>
+                                <div class="table-data__tool-right">
+                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small" onclick="window.location.href='/add-client'">
+                                        <i class="zmdi zmdi-plus"></i>Add clients</button>
+
+                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small" style="background-color: black " onclick="exportTableToCSV('clients.csv')" >
+                                        <i class="zmdi zmdi-plus"></i>Export</button>
+
+                                </div>
+                            </div>
+                            <!-- Client Table Container -->
+                            <div id="clientTable"></div>
+                            <!-- END DATA TABLE -->
+                        </div>
+                    </div>
+                    <div class="row m-t-30">
+                        <div class="col-md-12">
+                            <!-- DATA TABLE-->
+                            <div class="table-responsive m-b-40">
+                                <!-- Client data table will be inserted here -->
+                            </div>
+                            <!-- END DATA TABLE-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2024. All rights reserved to  <a >karzouz saad.</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MAIN CONTENT-->
+    </div>
+    <!-- END PAGE CONTAINER-->
+    </div>
+
+<!-- Jquery JS-->
+<script src="/vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="/vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS-->
+<script src="/vendor/slick/slick.min.js"></script>
+<script src="/vendor/wow/wow.min.js"></script>
+<script src="/vendor/animsition/animsition.min.js"></script>
+<script src="/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<script src="/vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="/vendor/counter-up/jquery.counterup.min.js"></script>
+<script src="/vendor/circle-progress/circle-progress.min.js"></script>
+<script src="/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="/vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="/vendor/select2/select2.min.js"></script>
+
+<!-- Main JS-->
+<script src="/js/main.js"></script>
+ <script>
+     let clientsData = [];
+
+     function displayClients(clients) {
+         let table = `
+    <div class="table-responsive m-b-40">
+        <div class="table-responsive table--no-card m-b-40">
+            <table class="table table-borderless table-data3">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CIN</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Nom Tache</th>
+                        <th>Statue</th>
+                        <th>Derniere Visite</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+
+         clients.forEach(client => {
+             const statueText = client.statue ? 'terminé' : 'en cours';
+             table += `
+            <tr>
+                <td>${client.id}</td>
+                <td>${client.cin}</td>
+                <td>${client.nom}</td>
+                <td>${client.prenom}</td>
+                <td>${client.email}</td>
+                <td>${client.nomT}</td>
+                <td>${statueText}</td>
+                <td>${client.dv}</td>
+                <td>
+                    <div class="table-data-feature">
+                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit" onclick="updateClient(${client.id})">
+                            <i class="zmdi zmdi-edit"></i>
+                        </button>
+
+                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete" onclick="deleteClient(${client.id})">
+                            <i class="zmdi zmdi-delete"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `;
+         });
+
+         table += `
+            </tbody>
+        </table>
+    </div>
+    `;
+
+         document.getElementById('clientTable').innerHTML = table;
+     }
+
+     function fetchClients() {
+         fetch('/api/clients')
+             .then(response => response.json())
+             .then(data => {
+                 clientsData = data;  // Store the data globally
+                 displayClients(data);
+             })
+             .catch(error => console.error('Error fetching clients:', error));
+     }
+
+     function updateClient(clientId) {
+         window.location.href = `/update-client/${clientId}`;
+     }
+
+     function deleteClient(clientId) {
+         fetch(`/api/clients/${clientId}`, {
+             method: 'DELETE'
+         })
+             .then(response => {
+                 if (response.ok) {
+                     fetchClients();
+                 } else {
+                     console.error('Failed to delete client');
+                 }
+             })
+             .catch(error => console.error('Error deleting client:', error));
+     }
+
+     document.addEventListener('DOMContentLoaded', (event) => {
+         fetchClients();
+     });
+
+     function sortByStatue() {
+         const sortedClients = [...clientsData].sort((a, b) => a.statue - b.statue);
+         displayClients(sortedClients);
+     }
+
+     function sortByDate() {
+         const sortedClients = [...clientsData].sort((a, b) => new Date(a.dv) - new Date(b.dv));
+         displayClients(sortedClients);
+     }
+     function sortById(){
+         const sortedClients = [...clientsData].sort((a, b) => a.id - b.id);
+         displayClients(sortedClients);
+     }
+
+     function handleSortChange(selectElement) {
+         const value = selectElement.value;
+         if (value === 'statue') {
+             sortByStatue();
+         } else if (value === 'date') {
+             sortByDate();
+         } else if (value === 'id'){
+             sortById();
+         }
+     }
+     function downloadCSV(csv, filename) {
+         let csvFile;
+         let downloadLink;
+
+         // CSV file
+         csvFile = new Blob([csv], { type: "text/csv" });
+
+         // Download link
+         downloadLink = document.createElement("a");
+
+         // File name
+         downloadLink.download = filename;
+
+         // Create a link to the file
+         downloadLink.href = window.URL.createObjectURL(csvFile);
+
+         // Hide download link
+         downloadLink.style.display = "none";
+
+         // Add the link to DOM
+         document.body.appendChild(downloadLink);
+
+         // Click download link
+         downloadLink.click();
+     }
+
+     function exportTableToCSV(filename) {
+         let csv = [];
+         let rows = document.querySelectorAll("table tr");
+
+         for (let i = 0; i < rows.length; i++) {
+             let row = [], cols = rows[i].querySelectorAll("td, th");
+
+             for (let j = 0; j < cols.length; j++) {
+                 row.push(cols[j].innerText);
+             }
+
+             csv.push(row.join(","));
+         }
+
+         // Download CSV file
+         downloadCSV(csv.join("\n"), filename);
+     }
+     document.getElementById('searchForm').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent the form from submitting traditionally
+         filterClientsByCin();
+     });
+
+     function filterClientsByCin() {
+         const searchInput = document.getElementById('searchInput').value.toLowerCase();
+         const filteredClients = clientsData.filter(client => client.cin.toLowerCase().includes(searchInput));
+         displayClients(filteredClients);
+     }
+
+
+
+
+ </script>
+
+
+</body>
+
+</html>
